@@ -12,10 +12,10 @@ export default function Hero() {
           imageSrc={placeholderImage}
           altText="Event Image"
           captionText="Circuit Crunch"
-          containerHeight="550px"
-          containerWidth="550px"
-          imageHeight="550px"
-          imageWidth="550px"
+          containerHeight="450px"
+          containerWidth="450px"
+          imageHeight="450px"
+          imageWidth="450px"
           rotateAmplitude={12}
           scaleOnHover={1.05}
           showMobileWarning={false}
