@@ -12,6 +12,7 @@
   "dependencies": {
     "@shopify/react-native-skia": "^2.6.2",
     "canvaskit-wasm": "^0.41.1",
+    "mathjs": "^15.2.0",
     "motion": "^12.38.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
