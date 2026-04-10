@@ -38,19 +38,20 @@ const styles: Record<string, CSSProperties> = {
     width: '100%',
     minHeight: '100vh',
     backgroundColor: C.bg,
-    overflow: 'hidden',
+    overflow: 'visible',
+    overflowX: 'hidden',
     margin: 0,
     padding: 0,
     boxSizing: 'border-box',
+    display: 'block',
   },
   canvas: {
-    position: 'absolute',
+    position: 'fixed',
     top: 0,
     left: 0,
     right: 0,
-    bottom: 0,
     width: '100%',
-    height: '100%',
+    height: '100vh',
     pointerEvents: 'none',
     zIndex: 0,
   },
@@ -86,8 +87,7 @@ const styles: Record<string, CSSProperties> = {
     opacity: 0.3,
   },
 
-  // ── BOTTOM CORNERS: Cool Glows ──
-  // Bottom-left corner: soft blue glow
+
   btmLeftBlue: {
     bottom: '-25vh',
     left: '-20vw',

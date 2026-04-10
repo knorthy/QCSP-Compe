@@ -1,0 +1,134 @@
+.rulebook-section {
+  padding: 6rem 2rem;
+  background-color: transparent;
+}
+
+.rulebook-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ─────────────────── HEADER ─────────────────── */
+.rulebook-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.rulebook-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #EA580C 0%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -1px;
+}
+
+.rulebook-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ─────────────────── CARDS GRID ─────────────────── */
+.rulebook-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* ─────────────────── CARD STYLING ─────────────────── */
+.rulebook-card {
+  position: relative;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.rulebook-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+}
+
+.rulebook-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rulebook-card-icon {
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.rulebook-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.rulebook-card-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.rulebook-card-arrow {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: #EA580C;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.rulebook-card:hover .rulebook-card-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* ─────────────────── RESPONSIVE ─────────────────── */
+@media (max-width: 768px) {
+  .rulebook-section {
+    padding: 4rem 1rem;
+  }
+
+  .rulebook-header {
+    margin-bottom: 3rem;
+  }
+
+  .rulebook-title {
+    font-size: 2rem;
+  }
+
+  .rulebook-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .rulebook-card {
+    padding: 1.5rem;
+  }
+}

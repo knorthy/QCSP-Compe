@@ -1,12 +1,15 @@
 import MeshBackground from './MeshBg.tsx'
-import Navbar from './Navbar.tsx' // Import the new navbar
+import Navbar from './Navbar.tsx'
+import Hero from './Hero.tsx'
+import Rulebook from './Rulebook.tsx'
 
 function App() {
   return (
     <>
       <Navbar />
       <MeshBackground>
-        {/* page content */}
+        <Hero />
+        <Rulebook />
       </MeshBackground>
     </>
   )
