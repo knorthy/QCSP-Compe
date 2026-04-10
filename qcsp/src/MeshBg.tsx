@@ -25,7 +25,7 @@ export default function MeshBackground({ children }: MeshBackgroundProps) {
 }
 
 const C = {
-  bg:          '#050505',     // Very deep, near-black
+  bg:          '#131517',     // Very deep, near-black
   topAmber:    '#D97706',     // Warm amber
   topOrange:   '#EA580C',     // Rich orange
   cornerBlue:  '#1E40AF',     // Cool blue for corners
@@ -64,27 +64,26 @@ const styles: Record<string, CSSProperties> = {
     borderRadius: '50%',
   },
 
-  // ── TOP: Warm Amber/Orange Light Leak ──
-  // Horizontal glow bleeding from top edge
+
   topAmber: {
-    top: '-35vh',
+    top: '-8vh',
     left: '50%',
     transform: 'translateX(-50%)',
     width: '200%',
-    height: '80vh',
+    height: '15vh',
     background: C.topAmber,
-    filter: 'blur(clamp(100px, 12vw, 200px))',
-    opacity: 0.5,
+    filter: 'blur(clamp(80px, 10vw, 160px))',
+    opacity: 0.35,
   },
   topOrange: {
-    top: '-25vh',
+    top: '-5vh',
     left: '50%',
     transform: 'translateX(-50%)',
     width: '180%',
-    height: '70vh',
+    height: '12vh',
     background: C.topOrange,
-    filter: 'blur(clamp(90px, 11vw, 180px))',
-    opacity: 0.4,
+    filter: 'blur(clamp(70px, 9vw, 140px))',
+    opacity: 0.3,
   },
 
   // ── BOTTOM CORNERS: Cool Glows ──

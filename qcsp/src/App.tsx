@@ -1,10 +1,14 @@
 import MeshBackground from './MeshBg.tsx'
+import Navbar from './Navbar.tsx' // Import the new navbar
 
 function App() {
   return (
-    <MeshBackground>
-      {/* page content */}
-    </MeshBackground>
+    <>
+      <Navbar />
+      <MeshBackground>
+        {/* page content */}
+      </MeshBackground>
+    </>
   )
 }
 

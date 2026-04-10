@@ -56,6 +56,49 @@
   }
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; 
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  
+  background: rgba(210, 210, 210, 0.4); /* Semi-transparent dark background */
+  backdrop-filter: blur(12px);       /* Blurs the background behind it */
+  -webkit-backdrop-filter: blur(12px); /* For Safari support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle bottom border */
+}
+
+/* Flexbox containers for the three sections */
+.nav-left, .nav-center, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Keeps the center logo perfectly centered */
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.nav-icon:hover {
+  opacity: 1;
+}
+
 #center {
   display: flex;
   flex-direction: column;
