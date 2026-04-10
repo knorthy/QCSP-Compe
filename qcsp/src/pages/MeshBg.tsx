@@ -1,4 +1,3 @@
-import React from 'react'
 import type { CSSProperties } from 'react'
 
 interface MeshBackgroundProps {
@@ -10,11 +9,9 @@ export default function MeshBackground({ children }: MeshBackgroundProps) {
     <div style={styles.wrapper}>
       <div style={styles.canvas} aria-hidden="true">
 
-        {/* TOP: Warm amber/orange light leak */}
         <div style={{ ...styles.blob, ...styles.topAmber }} />
         <div style={{ ...styles.blob, ...styles.topOrange }} />
 
-        {/* BOTTOM CORNERS: Cool blue/indigo glows */}
         <div style={{ ...styles.blob, ...styles.btmLeftBlue }} />
         <div style={{ ...styles.blob, ...styles.btmRightIndigo }} />
 
@@ -25,11 +22,11 @@ export default function MeshBackground({ children }: MeshBackgroundProps) {
 }
 
 const C = {
-  bg:          '#131517',     // Very deep, near-black
-  topAmber:    '#D97706',     // Warm amber
-  topOrange:   '#EA580C',     // Rich orange
-  cornerBlue:  '#1E40AF',     // Cool blue for corners
-  cornerIndigo: '#312E81',    // Deep indigo for corners
+  bg:          '#131517',    
+  topAmber:    '#D97706',    
+  topOrange:   '#EA580C',    
+  cornerBlue:  '#1E40AF',    
+  cornerIndigo: '#312E81',    
 } as const
 
 const styles: Record<string, CSSProperties> = {
@@ -97,7 +94,7 @@ const styles: Record<string, CSSProperties> = {
     filter: 'blur(clamp(100px, 12vw, 200px))',
     opacity: 0.35,
   },
-  // Bottom-right corner: soft indigo glow
+
   btmRightIndigo: {
     bottom: '-25vh',
     right: '-20vw',

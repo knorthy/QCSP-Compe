@@ -68,13 +68,12 @@
   align-items: center;
   padding: 12px 24px;
   
-  background: rgba(210, 210, 210, 0.4); /* Semi-transparent dark background */
-  backdrop-filter: blur(12px);       /* Blurs the background behind it */
-  -webkit-backdrop-filter: blur(12px); /* For Safari support */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle bottom border */
+  background: rgba(10, 10, 10, 0.4); 
+  backdrop-filter: blur(12px);       
+  -webkit-backdrop-filter: blur(12px); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
 }
 
-/* Flexbox containers for the three sections */
 .nav-left, .nav-center, .nav-right {
   display: flex;
   align-items: center;

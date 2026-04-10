@@ -1,4 +1,4 @@
-import './Rulebook.css'
+import '../components/Rulebook.css'
 import { MdMenuBook, MdEmojiEvents } from 'react-icons/md'
 
 export default function Rulebook() {
@@ -20,7 +20,6 @@ export default function Rulebook() {
   return (
     <section className="rulebook-section">
       <div className="rulebook-container">
-        {/* Header */}
         <div className="rulebook-header">
           <h2 className="rulebook-title">Rulebook</h2>
           <p className="rulebook-description">
@@ -28,7 +27,6 @@ export default function Rulebook() {
           </p>
         </div>
 
-        {/* Cards Grid */}
         <div className="rulebook-cards-grid">
           {cards.map((card) => (
             <div key={card.id} className="rulebook-card">

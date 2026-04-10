@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import './common.css'; 
+import { useState, useEffect } from 'react';
+import '../components/App.css';
+import '../common.css'; 
 
 
-import qcspLogo from './assets/QCSP logo.png';
-import eventLogo from './assets/Event logo.png';
+import qcspLogo from '../assets/QCSP logo.png';
+import eventLogo from '../assets/Event logo.png';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show blur effect once scrolled more than 50px
       setIsScrolled(window.scrollY > 50);
     };
 
@@ -22,19 +21,14 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
       
-      {/* Left: QCSP Logo & Text */}
       <div className="nav-left">
-        {/* Use the imported variable inside curly braces {} */}
         <img src={qcspLogo} alt="QCSP Logo" style={{ height: '60px' }} />
       </div>
 
-      {/* Center: World Quantum Day */}
       <div className="nav-center">
-        {/* Use the imported variable here too */}
         <img src={eventLogo} alt="World Quantum Day" style={{ height: '52px' }} />
       </div>
 
-      {/* Right: Icons */}
       <div className="nav-right">
         <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />

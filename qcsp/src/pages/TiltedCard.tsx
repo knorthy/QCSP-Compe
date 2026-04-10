@@ -1,7 +1,7 @@
 import type { SpringOptions } from 'motion/react';
 import { useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'motion/react';
-import './TiltedCard.css';
+import '../components/TiltedCard.css';
 
 interface TiltedCardProps {
   imageSrc: React.ComponentProps<'img'>['src'];

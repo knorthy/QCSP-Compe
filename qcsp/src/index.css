@@ -4,4 +4,11 @@ html, body {
   background: #131517;
   width: 100%;
   height: auto;
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
