@@ -63,18 +63,15 @@ export default function Rulebook() {
     }
   ]
 
-  // Calculate how many cards to duplicate for infinite scroll
   const cardsToShowAtOnce = 3
   const duplicateCount = cardsToShowAtOnce
 
-  // Create infinite carousel: [...duplicated end cards, ...original cards, ...duplicated start cards]
   const infiniteCarouselCards = [
     ...carouselCards.slice(-duplicateCount).map((card, idx) => ({ ...card, id: `${card.id}-end-${idx}` })),
     ...carouselCards,
     ...carouselCards.slice(0, duplicateCount).map((card, idx) => ({ ...card, id: `${card.id}-start-${idx}` }))
   ]
 
-  // Initialize carousel position to the first real card (offset by duplicated cards)
   useEffect(() => {
     if (carouselRef.current && activeCard === 0) {
       const cardWidth = 350 + 32 // card width (350px) + gap (2rem = 32px)
@@ -83,7 +80,6 @@ export default function Rulebook() {
     }
   }, [])
 
-  // Handle scroll to detect and snap duplicated cards
   useEffect(() => {
     const carousel = carouselRef.current
     if (!carousel) return
@@ -95,16 +91,13 @@ export default function Rulebook() {
       const scrollLeft = carousel.scrollLeft
       const newActive = Math.round(scrollLeft / cardWidth) - duplicateCount
 
-      // Determine if we've reached the end
       const maxScroll = carousel.scrollWidth - carousel.clientWidth
       const threshold = cardWidth * 0.5
 
-      // Snap to end duplicates (user scrolled to the right)
       if (scrollLeft > maxScroll - threshold) {
         carousel.scrollLeft = duplicateCount * cardWidth
         setActiveCard(0)
       }
-      // Snap to start duplicates (user scrolled to the left)
       else if (scrollLeft < threshold) {
         carousel.scrollLeft = (carouselCards.length + duplicateCount - 1) * cardWidth
         setActiveCard(carouselCards.length - 1)
@@ -117,7 +110,6 @@ export default function Rulebook() {
     return () => carousel.removeEventListener('scroll', handleScroll)
   }, [carouselCards.length, duplicateCount])
 
-  // Mouse down - start dragging
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     if (carouselRef.current) {
       dragRef.current = {
@@ -130,18 +122,15 @@ export default function Rulebook() {
     }
   }
 
-  // Mouse move - drag scrolling
   const handleMouseMove = (e: MouseEvent) => {
     if (!dragRef.current.isDragging || !carouselRef.current) return
 
     const distance = e.clientX - dragRef.current.startX
     const scrollPosition = dragRef.current.scrollStart - distance
 
-    // Smooth dragging with resistance at boundaries
     carouselRef.current.scrollLeft = scrollPosition
   }
 
-  // Mouse up - stop dragging
   const handleMouseUp = () => {
     dragRef.current.isDragging = false
     setIsDragging(false)
@@ -216,7 +205,6 @@ export default function Rulebook() {
             ))}
           </div>
           
-          {/* Navigation Dots */}
           <div className="carousel-navigation">
             {carouselCards.map((_, index) => (
               <button
