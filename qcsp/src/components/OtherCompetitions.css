@@ -121,7 +121,6 @@
   transform: scale(1.05);
 }
 
-/* Card Content */
 .competition-content {
   display: flex;
   flex-direction: column;
