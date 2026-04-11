@@ -3,8 +3,26 @@ import ccLogo from '../assets/CC 1.png'
 import placeholderImage from '../assets/QCSP-Placeholder.png'
 import { MdCalendarToday, MdLocationOn } from 'react-icons/md'
 import TiltedCard from './TiltedCard'
+import type { EventData } from '../types/EventData'
 
-export default function Hero() {
+interface HeroProps {
+  onOpenModal: (event: EventData) => void
+}
+
+export default function Hero({ onOpenModal }: HeroProps) {
+  const handleOpenModal = () => {
+    onOpenModal({
+      id: 1,
+      title: 'Circuit Crunch',
+      host: 'Lorem, Ipsum & Dolor',
+      date: 'Monday, April 3',
+      time: '10:00 am - 5:00 pm',
+      location: 'Online - Zoom Meeting',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      imageUrl: placeholderImage,
+    })
+  }
+
   return (
     <section className="hero-section">
       <div className="hero-left">
@@ -35,7 +53,7 @@ export default function Hero() {
         </p>
 
         <div className="hero-footer">
-          <button className="hero-button">Button →</button>
+          <button className="hero-button" onClick={handleOpenModal}>Button →</button>
           
           <div className="hero-details">
             <div className="detail-item">
