@@ -1,14 +1,14 @@
 .footer {
   width: 100%;
   background-color: #0f1419;
-  padding: 3rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .footer-divider {
   width: 100%;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.1);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .footer-content {
@@ -16,13 +16,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .footer-text {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
   margin: 0;
@@ -42,8 +42,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   color: rgba(255, 255, 255, 0.6);
   transition: color 0.3s ease;
   text-decoration: none;
@@ -61,11 +61,11 @@
 /* ─────────────────── RESPONSIVE ─────────────────── */
 @media (max-width: 768px) {
   .footer {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
   }
 
   .footer-divider {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .footer-content {
@@ -73,7 +73,7 @@
   }
 
   .footer-text {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .footer-socials {
@@ -81,7 +81,7 @@
   }
 
   .social-icon {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
   }
 }
