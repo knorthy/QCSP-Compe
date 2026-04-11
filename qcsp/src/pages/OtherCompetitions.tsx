@@ -32,7 +32,6 @@ export default function OtherCompetitions() {
     }
   ]
 
-  // Mouse down - start dragging
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     if (carouselRef.current) {
       dragRef.current = {
@@ -44,7 +43,6 @@ export default function OtherCompetitions() {
     }
   }
 
-  // Mouse move - drag scrolling
   const handleMouseMove = (e: MouseEvent) => {
     if (!dragRef.current.isDragging || !carouselRef.current) return
 
@@ -54,7 +52,6 @@ export default function OtherCompetitions() {
     carouselRef.current.scrollLeft = scrollPosition
   }
 
-  // Mouse up - stop dragging
   const handleMouseUp = () => {
     dragRef.current.isDragging = false
     setIsDragging(false)
@@ -77,7 +74,6 @@ export default function OtherCompetitions() {
   return (
     <section className="other-competitions-section">
       <div className="other-competitions-container">
-        {/* Header */}
         <div className="competitions-header">
           <h2 className="competitions-title">
             Other <span className="highlight">Competitions</span>
@@ -87,7 +83,6 @@ export default function OtherCompetitions() {
           </p>
         </div>
 
-        {/* Carousel */}
         <div className="competitions-carousel-wrapper">
           <div
             className="competitions-carousel"
